@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Galerie - Asha tattoo - Pardubice</title>
+    <meta name="description" content="Exkluzivní galerie tetování – Asha tattoo Pardubice.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <script src="script.js" defer></script>
+
+    <script>
+      (() => {
+        const d=document,s=d.createElement("script");s.type="module";
+        s.src="https://w.behold.so/widget.js";d.head.append(s);
+      })();
+    </script>
+</head>
+<body class="gallery-page">
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <div class="abstract-glow"></div>
+
+    <header class="header">
+        <a href="index.html" class="logo">asha<span>tattoo</span></a>
+        <nav class="nav-menu" aria-label="Main Navigation">
+            <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+            <a href="index.html#about" data-i18n="nav.about">O mně</a>
+            <a href="index.html#styles" data-i18n="nav.styles">Styly</a>
+            <a href="gallery.html" class="active" data-i18n="nav.gallery">Galerie</a>
+            <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#booking" class="btn-secondary" data-i18n="nav.book">Rezervace</a>
+        </nav>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="cs">CS</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn" data-lang="ua">UA</button>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span></span><span></span>
+        </button>
+    </header>
+
+    <main style="padding-top: 160px; min-height: 80vh;">
+        <section class="gallery-hero-section">
+            <div class="container text-center animate-on-scroll">
+                <h1 class="section-title" data-i18n="gallery.pageTitle">Portfolio & Galerie</h1>
+                <p class="gallery-intro-text" data-i18n="gallery.pageSubtitle">Prohlédněte si naše exkluzivní práce, autorské motivy a nejnovější příspěvky přímo z Instagramu.</p>
+            </div>
+        </section>
+
+        <section class="gallery-content-section" style="padding: 60px 0 120px;">
+            <div class="container">
+                <!-- Custom premium gallery -->
+                <div class="custom-premium-gallery animate-on-scroll" style="margin-top: 0; border-top: none; padding-top: 0;">
+                    <h2 class="gallery-subtitle" data-i18n="gallery.premiumTitle">Exclusive Flash Portfolio</h2>
+                    <div class="premium-gallery-grid">
+                        <div class="premium-gallery-item">
+                            <div class="premium-gallery-inner">
+                                <img src="tattoo1.jpg" alt="Portfolio 1">
+                                <div class="item-info">
+                                    <span>Fine Line Concept</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="premium-gallery-item tall">
+                            <div class="premium-gallery-inner">
+                                <img src="tattoo2.jpg" alt="Portfolio 2">
+                                <div class="item-info">
+                                    <span>Botanical Art</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="premium-gallery-item">
+                            <div class="premium-gallery-inner">
+                                <img src="tattoo3.jpg" alt="Portfolio 3">
+                                <div class="item-info">
+                                    <span>Minimalistic Tattoo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="premium-gallery-item">
+                            <div class="premium-gallery-inner">
+                                <img src="tattoo4.jpg" alt="Portfolio 4">
+                                <div class="item-info">
+                                    <span>Custom Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="premium-gallery-item">
+                            <div class="premium-gallery-inner">
+                                <img src="tattoo5.jpg" alt="Portfolio 5">
+                                <div class="item-info">
+                                    <span>Ornamental Line</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="premium-gallery-item">
+                            <div class="premium-gallery-inner">
+                                <img src="tattoo6.jpg" alt="Portfolio 6">
+                                <div class="item-info">
+                                    <span>Microrealism</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram feed -->
+                <div class="instagram-section-wrapper animate-on-scroll" style="margin-top: 100px; padding-top: 60px; border-top: 1px solid var(--border-color);">
+                    <h2 class="gallery-subtitle" style="margin-bottom: 40px;">Instagram Feed</h2>
+                    <div class="behold-container">
+                        <behold-widget feed-id="KEGL1BrC2KqgYfweAYzV"></behold-widget>
+                    </div>
+                </div>
+
+                <div class="gallery-more animate-on-scroll text-center" style="margin-top: 60px;">
+                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener" class="btn-link" data-i18n="gallery.more">Více fotek na Instagramu →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">asha<span>tattoo</span></a>
+                <p data-i18n="footer.desc">Moderní tetovací studio v Pardubicích. Tetování na míru s důrazem na kvalitu, hygienu a individuální přístup.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="#" class="disabled-link">Facebook</a>
+                    <a href="#" class="disabled-link">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <h4 data-i18n="footer.location">Kde nás najdete</h4>
+                <p class="footer-address">Nerudova 1407, 53002 Pardubice I - Zelené Předměstí, Česko</p>
+                <p class="footer-email">info@ashatattoo.cz</p>
+                <div class="footer-phone-wrapper">
+                    <span class="phone-label" data-i18n="footer.phoneLabel">Telefon:</span>
+                    <a href="tel:+420777123456" class="footer-phone-link">+420 777 123 456</a>
+                </div>
+            </div>
+            <div class="footer-hours">
+                <h4 data-i18n="footer.hours">Provozní doba</h4>
+                <p data-i18n="footer.bookingOnly">Pouze po předchozí rezervaci</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p class="copy">&copy; 2026 asha tattoo. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

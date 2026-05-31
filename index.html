@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Asha tattoo - Pardubice</title>
+    <meta name="description" content="Tetovací studio v Pardubicích – profesionální tetování na míru.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <div class="abstract-glow"></div>
+
+    <header class="header">
+        <a href="#" class="logo">asha<span>tattoo</span></a>
+        <nav class="nav-menu" aria-label="Main Navigation">
+            <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+            <a href="#about" data-i18n="nav.about">O mně</a>
+            <a href="#styles" data-i18n="nav.styles">Styly</a>
+            <a href="gallery.html" data-i18n="nav.gallery">Galerie</a>
+            <a href="#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="#booking" class="btn-secondary" data-i18n="nav.book">Rezervace</a>
+        </nav>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="cs">CS</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn" data-lang="ua">UA</button>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-container hero-layout container">
+                <div class="hero-left-content">
+                    <div class="hero-tagline" data-i18n="hero.tagline">Pardubice — Profesionální tetovací studio</div>
+                    <h1 class="hero-title">
+                        <span class="reveal-text" data-i18n="hero.title1">Tattoo Artistry</span><br>
+                        <span class="reveal-text highlight-text" data-i18n="hero.title2"></span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">
+                        Specializujeme se na kvalitní tetování šité na míru vašim představám. Každý motiv vytváříme s důrazem na preciznost, hygienu a dlouhou životnost.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#booking" class="btn-primary" data-i18n="general.bookBtn">Rezervovat termín</a>
+                        <a href="gallery.html" class="btn-link" data-i18n="hero.explore">Prohlédnout práci →</a>
+                    </div>
+                </div>
+
+                <div class="hero-right-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="foto/hero.png" alt="Asha Tattoo Art" class="hero-main-img">
+                        <div class="hero-img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container grid-2">
+                <div class="about-image-wrapper">
+                    <div class="image-placeholder animate-on-scroll">
+                        <img src="foto/about.jpg" alt="Asha Studio" class="about-img">
+                        <span class="cyber-label">Natalia Kravchenko / Tatérka</span>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <h2 class="section-title" data-i18n="about.title">O mně & filozofie</h2>
+                    <p class="philosophy-text" data-i18n="about.p1">
+                        Jmenuji se Natália a tetování je pro mě způsob, jak pomáhat lidem cítit se ve své kůži lépe. Každý návrh tvořím na míru – od první skicy až po finální aplikaci. Důležitá je pro mě komunikace, bezpečí a radost z výsledku.
+                    </p>
+                    <blockquote class="artist-statement" data-i18n="about.quote">
+                        „Tetování je osobní symbol, který vám zůstane na celý život. Přistupuji k němu s respektem a láskou k detailu.“
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="styles" id="styles">
+            <div class="container">
+                <h2 class="section-title center text-reveal" data-i18n="styles.title">Co děláme</h2>
+                <div class="styles-grid">
+                    <div class="style-card glass-card animate-on-scroll">
+                        <div class="style-num">01</div>
+                        <h3 data-i18n="styles.s1.title">Old School Tattoo</h3>
+                        <p data-i18n="styles.s1.desc">Tradiční tetování s výraznými konturami a sytými barvami. Kotvy, růže, vlaštovky – nadčasové motivy, které nikdy nevyjdou z módy.</p>
+                    </div>
+                    <div class="style-card glass-card animate-on-scroll">
+                        <div class="style-num">02</div>
+                        <h3 data-i18n="styles.s2.title">Floral Tattoo</h3>
+                        <p data-i18n="styles.s2.desc">Jemné květinové a rostlinné motivy, které krásně kopírují křivky těla. Elegantní, přirozený a nadčasový vzhled.</p>
+                    </div>
+                    <div class="style-card glass-card animate-on-scroll">
+                        <div class="style-num">03</div>
+                        <h3 data-i18n="styles.s3.title">Fine Line</h3>
+                        <p data-i18n="styles.s3.desc">Ultra tenké linky, geometrické tvary a drobné detaily. Perfektní pro minimalistický vzhled, písmo nebo malé symboly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimal gallery teaser - without gradient -->
+        <section class="gallery-teaser-new animate-on-scroll">
+            <div class="container text-center">
+                <h2 class="section-title" data-i18n="gallery.teaserTitle">Portfolio</h2>
+                <p class="gallery-teaser-text" data-i18n="gallery.teaserDesc">Všechny mé práce, autorské motivy a inspirace najdete v samostatné galerii.</p>
+                <a href="gallery.html" class="btn-link" data-i18n="gallery.teaserBtn">Prohlédnout galerii →</a>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="container small-container">
+                <h2 class="section-title center animate-on-scroll" data-i18n="faq.title">Časté dotazy</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header">
+                            <span data-i18n="faq.q1">Jak probíhá rezervace termínu?</span>
+                            <span class="icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p data-i18n="faq.a1">Napište mi zprávu na Instagram. Popište svůj nápad (velikost, místo, styl), domluvíme konzultaci a pak termín samotného tetování.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header">
+                            <span data-i18n="faq.q2">Jak se mám připravit na tetování?</span>
+                            <span class="icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p data-i18n="faq.a2">Den předem nepite alkohol a neužívejte léky na ředění krve. Pořádně se vyspěte, najezte se a vezměte si pohodlné oblečení, které nebrání přístupu k místu tetování.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header">
+                            <span data-i18n="faq.q3">Jak se starat o nové tetování?</span>
+                            <span class="icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p data-i18n="faq.a3">Používáme hojivé fólie (second skin). Noste ji 3–4 dny, pak opatrně odlepte, tetování jemně omyjte antibakteriálním mýdlem a 2–3krát denně mažte doporučeným krémem po dobu 2 týdnů.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header">
+                            <span data-i18n="faq.q4">Kolik tetování stojí?</span>
+                            <span class="icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p data-i18n="faq.a4">Minimální cena začíná na 1500 Kč (kryje sterilní materiál). Celková cena závisí na velikosti, složitosti motivu a čase práce. Přesnou nabídku dostanete po konzultaci.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header">
+                            <span data-i18n="faq.q5">Bolí to? Lze použít anestetikum?</span>
+                            <span class="icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p data-i18n="faq.a5">Bolest je individuální a závisí na místě. Znecitlivující krémy nedoporučuji – mění strukturu kůže, což může zhoršit výsledek i hojení.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header">
+                            <span data-i18n="faq.q6">Dokážete předělat staré tetování (cover-up)?</span>
+                            <span class="icon"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p data-i18n="faq.a6">Ano, ale záleží na tmavosti a velikosti původního motivu. Vzhledem k jemným liniím, které dělám, je potřeba osobní nebo online konzultace, abychom zjistili, zda to půjde.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section" id="booking">
+            <div class="container">
+                <div class="booking-card glass-card text-center animate-on-scroll" style="position: relative; overflow: hidden;">
+                    <div class="cyber-accent-line"></div>
+                    
+                    <!-- Discount Badge -->
+                    <div class="discount-badge">
+                        <span class="discount-badge-text" data-i18n="discount.badge">SLEVA</span>
+                        <span class="discount-badge-percent" data-i18n="discount.percent">10 %</span>
+                        <span class="discount-badge-label" data-i18n="discount.label">na první návštěvu</span>
+                    </div>
+
+                    <h2 class="cta-title" data-i18n="booking.title">Domluvte si svůj termín</h2>
+                    <p class="cta-subtitle" data-i18n="booking.subtitle">Napište mi zprávu na Instagram a společně vytvoříme tetování, které si zamilujete.</p>
+                    
+                    <div class="messengers-grid">
+                        <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener" class="btn-primary main-booking-btn">
+                            <span>Instagram DM</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">asha<span>tattoo</span></a>
+                <p data-i18n="footer.desc">Moderní tetovací studio v Pardubicích. Tetování na míru s důrazem na kvalitu, hygienu a individuální přístup.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="#" class="disabled-link">Facebook</a>
+                    <a href="#" class="disabled-link">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <h4 data-i18n="footer.location">Kde nás najdete</h4>
+                <p class="footer-address">Nerudova 1407, 53002 Pardubice I - Zelené Předměstí, Česko</p>
+                <p class="footer-email">info@ashatattoo.cz</p>
+                <div class="footer-phone-wrapper">
+                    <span class="phone-label" data-i18n="footer.phoneLabel">Telefon:</span>
+                    <a href="tel:+420777123456" class="footer-phone-link">+420 777 123 456</a>
+                </div>
+            </div>
+            <div class="footer-hours">
+                <h4 data-i18n="footer.hours">Provozní doba</h4>
+                <p data-i18n="footer.bookingOnly">Pouze po předchozí rezervaci</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p class="copy">&copy; 2026 asha tattoo. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
