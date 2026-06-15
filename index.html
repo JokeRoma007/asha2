@@ -22,7 +22,6 @@
 
     <div class="custom-cursor"></div>
     <div class="custom-cursor-dot"></div>
-
     <div class="abstract-glow"></div>
 
     <header class="header">
@@ -62,11 +61,9 @@
                         <a href="gallery.html" class="btn-link" data-i18n="hero.explore">Prohlédnout práci →</a>
                     </div>
                 </div>
-
                 <div class="hero-right-visual">
                     <div class="hero-image-wrapper">
                         <img src="foto/hero.png" alt="Asha Tattoo Art" class="hero-main-img">
-                        <div class="hero-img-overlay"></div>
                     </div>
                 </div>
             </div>
@@ -115,7 +112,7 @@
             </div>
         </section>
 
-        <!-- Minimal gallery teaser - without gradient -->
+        <!-- Gallery teaser -->
         <section class="gallery-teaser-new animate-on-scroll">
             <div class="container text-center">
                 <h2 class="section-title" data-i18n="gallery.teaserTitle">Portfolio</h2>
@@ -124,68 +121,93 @@
             </div>
         </section>
 
+        <!-- Reviews – only photos -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <h2 class="section-title center animate-on-scroll" data-i18n="reviews.title">Co říkají klienti</h2>
+                <div class="reviews-grid photos-only">
+                    <div class="review-photo-card animate-on-scroll">
+                        <img src="foto/recenze/1.jpg" alt="Klient 1">
+                    </div>
+                    <div class="review-photo-card animate-on-scroll">
+                        <img src="foto/recenze/2.jpg" alt="Klient 2">
+                    </div>
+                    <div class="review-photo-card animate-on-scroll">
+                        <img src="foto/recenze/3.jpg" alt="Klient 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action section -->
+        <section class="action-section" id="action">
+            <div class="container">
+                <div class="action-card animate-on-scroll">
+                    <div class="action-image">
+                        <img src="foto/akce/1.jpg" alt="Speciální akce">
+                    </div>
+                    <div class="action-content">
+                        <h2 class="section-title" data-i18n="action.title">1 + 1 = 1</h2>
+                        <p class="action-text" data-i18n="action.text">Přijďte si vyzkoušet tetování za zvýhodněnou cenu! Sledujte náš Instagram a získejte 15% slevu na vybrané motivy po celý červen.</p>
+                        <a href="https://www.instagram.com/asha___tattoo/" target="_blank" class="btn-primary" data-i18n="action.btn">Zjistit více →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="faq" id="faq">
             <div class="container small-container">
                 <h2 class="section-title center animate-on-scroll" data-i18n="faq.title">Časté dotazy</h2>
-                
                 <div class="accordion">
+                    <!-- Běžné FAQ položky -->
                     <div class="accordion-item animate-on-scroll">
-                        <button class="accordion-header">
-                            <span data-i18n="faq.q1">Jak probíhá rezervace termínu?</span>
-                            <span class="icon"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a1">Napište mi zprávu na Instagram. Popište svůj nápad (velikost, místo, styl), domluvíme konzultaci a pak termín samotného tetování.</p>
-                        </div>
+                        <button class="accordion-header"><span data-i18n="faq.q1">Jak probíhá rezervace termínu?</span><span class="icon"></span></button>
+                        <div class="accordion-content"><p data-i18n="faq.a1">Napište mi zprávu na Instagram. Popište svůj nápad (velikost, místo, styl), domluvíme konzultaci a pak termín samotného tetování.</p></div>
                     </div>
-                    
                     <div class="accordion-item animate-on-scroll">
-                        <button class="accordion-header">
-                            <span data-i18n="faq.q2">Jak se mám připravit na tetování?</span>
-                            <span class="icon"></span>
-                        </button>
+                        <button class="accordion-header"><span data-i18n="faq.q2">Jak se mám připravit na tetování?</span><span class="icon"></span></button>
+                        <div class="accordion-content"><p data-i18n="faq.a2">Den předem nepite alkohol a neužívejte léky na ředění krve. Pořádně se vyspěte, najezte se a vezměte si pohodlné oblečení, které nebrání přístupu k místu tetování.</p></div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header"><span data-i18n="faq.q3">Jak se starat o nové tetování?</span><span class="icon"></span></button>
+                        <div class="accordion-content"><p data-i18n="faq.a3">Používáme hojivé fólie (second skin). Noste ji 3–4 dny, pak opatrně odlepte, tetování jemně omyjte antibakteriálním mýdlem a 2–3krát denně mažte doporučeným krémem po dobu 2 týdnů.</p></div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header"><span data-i18n="faq.q4">Kolik tetování stojí?</span><span class="icon"></span></button>
+                        <div class="accordion-content"><p data-i18n="faq.a4">Minimální cena začíná na 1500 Kč (kryje sterilní materiál). Celková cena závisí na velikosti, složitosti motivu a čase práce. Přesnou nabídku dostanete po konzultaci.</p></div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header"><span data-i18n="faq.q5">Bolí to? Lze použít anestetikum?</span><span class="icon"></span></button>
+                        <div class="accordion-content"><p data-i18n="faq.a5">Bolest je individuální a závisí na místě. Znecitlivující krémy nedoporučuji – mění strukturu kůže, což může zhoršit výsledek i hojení.</p></div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header"><span data-i18n="faq.q6">Dokážete předělat staré tetování (cover-up)?</span><span class="icon"></span></button>
+                        <div class="accordion-content"><p data-i18n="faq.a6">Ano, ale záleží na tmavosti a velikosti původního motivu. Vzhledem k jemným liniím, které dělám, je potřeba osobní nebo online konzultace, abychom zjistili, zda to půjde.</p></div>
+                    </div>
+
+                    <!-- AFTERCARE – nová sekce -->
+                    <div class="accordion-item animate-on-scroll">
+                        <button class="accordion-header"><span data-i18n="faq.aftercare.title">Péče o tetování (Aftercare)</span><span class="icon"></span></button>
                         <div class="accordion-content">
-                            <p data-i18n="faq.a2">Den předem nepite alkohol a neužívejte léky na ředění krve. Pořádně se vyspěte, najezte se a vezměte si pohodlné oblečení, které nebrání přístupu k místu tetování.</p>
+                            <div class="aftercare-steps">
+                                <p><strong data-i18n="faq.aftercare.wash.title">1. MYTÍ</strong><br><span data-i18n="faq.aftercare.wash.desc">Správně myjte min. 2x denně antibakteriálním mýdlem, jemně s ohledem na stroupky. Mýdlo důkladně opláchněte. Osušte čistými ubrousky "poklepáním". Nakonec namažte mastí na tetování.</span></p>
+                                <p><strong data-i18n="faq.aftercare.sun.title">2. SLUNÍČKO</strong><br><span data-i18n="faq.aftercare.sun.desc">Sluníčko je ohrožující faktor jak u čerstvého tak u zahojeného tetování. Opalování se musíte vyhnout jak měsíc před tetováním, tak zhruba 3 měsíce po tetování, jelikož tak dlouho se pigment v kůži usazuje. Používejte tedy vždy na zahojené tetování opalovací krém s vysokým faktorem, nebo přímo speciální opalovací krém na tetování. Během hojení na sebe určitě nic nepatelíte a tetování schovávejte pod oblečením.</span></p>
+                                <p><strong data-i18n="faq.aftercare.water.title">3. VODA</strong><br><span data-i18n="faq.aftercare.water.desc">Vlhkosti se musíte vyhýbat! Především dokud máte na tetování stroupky. Ve vlhku se stroupky odmočí a odpadnou a zanechají ránu otevřenou - to může vést k zajizvení. Krátká sprcha vás nezabije, ale bylo by zbytečné tam zůstávat déle než je třeba.</span></p>
+                                <p><strong data-i18n="faq.aftercare.cream.title">4. JAK MAZAT</strong><br><span data-i18n="faq.aftercare.cream.desc">Na krému se vždy domluvíme s tatérem - jedině za osvědčený produkt se vám tatér může zaručit. Mazat stačí bohatě 2x denně. Krém jemně vmasírujte do kůže a rozetřete do ztracena. Nedávejte si tam žádné tlusté vrstvy! Stačí úplné minimum aby mohla kůže dýchat!</span></p>
+                                <p><strong data-i18n="faq.aftercare.movement.title">5. POHYB</strong><br><span data-i18n="faq.aftercare.movement.desc">Lehký pohyb vám u čerstvého tetování nijak neuškodí. Nejvíc škodit může upnuté oblečení, nebo textil který by se vám mohl zaseknout o strup. Pokud musíte do práce, oblečte se pohodlně. Větší zátěž na tělo je problém kvůli pocení. Pokud se v práci zpotíte, dejte si pauzu a jděte si tetování umýt. Pokud jste sportovci a máte v blízké době zápas tak na tetování vůbec nechoďte. Je to jednoduché.</span></p>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- JAK SE OBJEDNAT – nová sekce -->
                     <div class="accordion-item animate-on-scroll">
-                        <button class="accordion-header">
-                            <span data-i18n="faq.q3">Jak se starat o nové tetování?</span>
-                            <span class="icon"></span>
-                        </button>
+                        <button class="accordion-header"><span data-i18n="faq.booking.how.title">Jak se objednat?</span><span class="icon"></span></button>
                         <div class="accordion-content">
-                            <p data-i18n="faq.a3">Používáme hojivé fólie (second skin). Noste ji 3–4 dny, pak opatrně odlepte, tetování jemně omyjte antibakteriálním mýdlem a 2–3krát denně mažte doporučeným krémem po dobu 2 týdnů.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item animate-on-scroll">
-                        <button class="accordion-header">
-                            <span data-i18n="faq.q4">Kolik tetování stojí?</span>
-                            <span class="icon"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a4">Minimální cena začíná na 1500 Kč (kryje sterilní materiál). Celková cena závisí na velikosti, složitosti motivu a čase práce. Přesnou nabídku dostanete po konzultaci.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item animate-on-scroll">
-                        <button class="accordion-header">
-                            <span data-i18n="faq.q5">Bolí to? Lze použít anestetikum?</span>
-                            <span class="icon"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a5">Bolest je individuální a závisí na místě. Znecitlivující krémy nedoporučuji – mění strukturu kůže, což může zhoršit výsledek i hojení.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item animate-on-scroll">
-                        <button class="accordion-header">
-                            <span data-i18n="faq.q6">Dokážete předělat staré tetování (cover-up)?</span>
-                            <span class="icon"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p data-i18n="faq.a6">Ano, ale záleží na tmavosti a velikosti původního motivu. Vzhledem k jemným liniím, které dělám, je potřeba osobní nebo online konzultace, abychom zjistili, zda to půjde.</p>
+                            <div class="booking-guide">
+                                <p><strong data-i18n="faq.booking.step1.title">1. Výběr motivu</strong><br><span data-i18n="faq.booking.step1.desc">Tvoje představa motivu může být různá. Ať máš jasnou představu nebo ne, rádi s tím poradíme! – Máš motiv vymyšlený v hlavě? Perfektní! Teď už ho jen co nejdetailněji popiš táterovi/tetérce a on/ona ti ho navrhne. – Nemáš moc dobrou představivost, ale našel sis na pinterestu pár předloh? Nevadí! Rádi podle tvé předlohy nakreslíme nový a originální návrh. – Nakreslil sis svůj návrh, nebo máš návrh od někoho? Chceš ho dopracovat nebo nechceš? S tím si také poradíme!</span></p>
+                                <p><strong data-i18n="faq.booking.step2.title">2. Obsah zprávy</strong><br><span data-i18n="faq.booking.step2.desc">Pro plynulý průběh konverzace a abychom mohli co nejlépe vyhovět, by měla zpráva obsahovat: – Popis motivu, popřípadě reference. – Předpokládané umístění a velikost tetování. – Barevnost (černé nebo barevné?). – Zdravotní omezení? – Zda se jedná o první tetování? – Zda ti bylo 18? – Preferovaný termín? – Popřípadě zda máš nějaký budget? (hlavně u větších projektů).</span></p>
+                                <p><strong data-i18n="faq.booking.step3.title">3. Na jaké zprávy neodpovídáme</strong><br><span data-i18n="faq.booking.step3.desc">Bohužel v dnešní době slušnost ze sociálních sítí rychlým tempem mizí, tak bychom Vás rádi upozornili, že na některé zprávy vám možná neodpovíme. – Pokud zpráva zní pouze "Ahoj." NEODPOVÍDÁME. – Zpráva bez představení typu "Za kolik tohle?" NEODPOVÍDÁME. – Zpráva typu: "Dobrý den, měl bych takovou zvláštní prosbu..." – intimní partie prosím netetujeme.</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -196,22 +218,14 @@
             <div class="container">
                 <div class="booking-card glass-card text-center animate-on-scroll" style="position: relative; overflow: hidden;">
                     <div class="cyber-accent-line"></div>
-                    
-                    <!-- Discount Badge -->
                     <div class="discount-badge">
                         <span class="discount-badge-text" data-i18n="discount.badge">SLEVA</span>
                         <span class="discount-badge-percent" data-i18n="discount.percent">10 %</span>
                         <span class="discount-badge-label" data-i18n="discount.label">na první návštěvu</span>
                     </div>
-
                     <h2 class="cta-title" data-i18n="booking.title">Domluvte si svůj termín</h2>
                     <p class="cta-subtitle" data-i18n="booking.subtitle">Napište mi zprávu na Instagram a společně vytvoříme tetování, které si zamilujete.</p>
-                    
-                    <div class="messengers-grid">
-                        <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener" class="btn-primary main-booking-btn">
-                            <span>Instagram DM</span>
-                        </a>
-                    </div>
+                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank" class="btn-primary">Instagram DM</a>
                 </div>
             </div>
         </section>
@@ -223,7 +237,7 @@
                 <a href="#" class="logo">asha<span>tattoo</span></a>
                 <p data-i18n="footer.desc">Moderní tetovací studio v Pardubicích. Tetování na míru s důrazem na kvalitu, hygienu a individuální přístup.</p>
                 <div class="footer-socials">
-                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank">Instagram</a>
                     <a href="#" class="disabled-link">Facebook</a>
                     <a href="#" class="disabled-link">TikTok</a>
                 </div>
@@ -231,10 +245,9 @@
             <div class="footer-contacts">
                 <h4 data-i18n="footer.location">Kde nás najdete</h4>
                 <p class="footer-address">Nerudova 1407, 53002 Pardubice I - Zelené Předměstí, Česko</p>
-                <p class="footer-email">info@ashatattoo.cz</p>
                 <div class="footer-phone-wrapper">
                     <span class="phone-label" data-i18n="footer.phoneLabel">Telefon:</span>
-                    <a href="tel:+420777123456" class="footer-phone-link">+420 777 123 456</a>
+                    <a href="tel:+420721428115" class="footer-phone-link">+420 721 428 115</a>
                 </div>
             </div>
             <div class="footer-hours">
@@ -247,5 +260,38 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <img src="" alt="Lightbox image">
+    </div>
+
+    <script>
+        // Lightbox pro recenze a akci (pokud není v globálním scriptu)
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox) return;
+            const lightboxImg = lightbox.querySelector('img');
+            const closeBtn = lightbox.querySelector('.lightbox-close');
+            function openLightbox(src) {
+                lightboxImg.src = src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
+            document.querySelectorAll('.review-photo-card, .action-card .action-image').forEach(el => {
+                el.addEventListener('click', () => {
+                    const img = el.querySelector('img');
+                    if (img && img.src) openLightbox(img.src);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

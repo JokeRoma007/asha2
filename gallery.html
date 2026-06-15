@@ -4,32 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Galerie - Asha tattoo - Pardubice</title>
-    <meta name="description" content="Exkluzivní galerie tetování – Asha tattoo Pardubice.">
+    <meta name="description" content="Portfolio tetování – Asha tattoo Pardubice.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+    <!-- Globální CSS -->
     <link rel="stylesheet" href="style.css">
     
+    <!-- Globální JS -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    
     <script src="script.js" defer></script>
 
+    <!-- Instagram widget (volitelný) -->
     <script>
       (() => {
         const d=document,s=d.createElement("script");s.type="module";
         s.src="https://w.behold.so/widget.js";d.head.append(s);
       })();
     </script>
+
+    <style>
+        /* Jen doplňkové styly pro galerii – nic, co by kolidovalo s globálními */
+        .gallery-page .premium-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .gallery-page .premium-gallery-item {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease;
+        }
+        .gallery-page .premium-gallery-item:hover {
+            transform: translateY(-4px);
+        }
+        .gallery-page .premium-gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        /* Lightbox – napojený na globální styl, ale pro jistotu definujeme znovu */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+        .lightbox.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .lightbox-close:hover {
+            transform: scale(1.1);
+            color: var(--accent-color);
+        }
+        @media (max-width: 640px) {
+            .gallery-page .premium-gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+    </style>
 </head>
 <body class="gallery-page">
 
     <div class="custom-cursor"></div>
     <div class="custom-cursor-dot"></div>
-
     <div class="abstract-glow"></div>
 
     <header class="header">
@@ -53,83 +128,30 @@
     </header>
 
     <main style="padding-top: 160px; min-height: 80vh;">
-        <section class="gallery-hero-section">
-            <div class="container text-center animate-on-scroll">
-                <h1 class="section-title" data-i18n="gallery.pageTitle">Portfolio & Galerie</h1>
-                <p class="gallery-intro-text" data-i18n="gallery.pageSubtitle">Prohlédněte si naše exkluzivní práce, autorské motivy a nejnovější příspěvky přímo z Instagramu.</p>
+        <div class="container">
+            <h1 class="section-title text-center" data-i18n="gallery.pageTitle">Portfolio & Galerie</h1>
+            <p class="text-center" style="margin-bottom: 40px; color: var(--text-muted);" data-i18n="gallery.pageSubtitle">Prohlédněte si naše exkluzivní práce, autorské motivy a nejnovější příspěvky z Instagramu.</p>
+
+            <div class="premium-gallery-grid">
+                <div class="premium-gallery-item"><img src="foto/prace/1.jpg" alt="Tattoo 1"></div>
+                <div class="premium-gallery-item"><img src="foto/prace/2.jpg" alt="Tattoo 2"></div>
+                <div class="premium-gallery-item"><img src="foto/prace/3.jpg" alt="Tattoo 3"></div>
+                <div class="premium-gallery-item"><img src="foto/prace/4.jpg" alt="Tattoo 4"></div>
+                <div class="premium-gallery-item"><img src="foto/prace/5.jpg" alt="Tattoo 5"></div> 
             </div>
-        </section>
 
-        <section class="gallery-content-section" style="padding: 60px 0 120px;">
-            <div class="container">
-                <!-- Custom premium gallery -->
-                <div class="custom-premium-gallery animate-on-scroll" style="margin-top: 0; border-top: none; padding-top: 0;">
-                    <h2 class="gallery-subtitle" data-i18n="gallery.premiumTitle">Exclusive Flash Portfolio</h2>
-                    <div class="premium-gallery-grid">
-                        <div class="premium-gallery-item">
-                            <div class="premium-gallery-inner">
-                                <img src="tattoo1.jpg" alt="Portfolio 1">
-                                <div class="item-info">
-                                    <span>Fine Line Concept</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="premium-gallery-item tall">
-                            <div class="premium-gallery-inner">
-                                <img src="tattoo2.jpg" alt="Portfolio 2">
-                                <div class="item-info">
-                                    <span>Botanical Art</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="premium-gallery-item">
-                            <div class="premium-gallery-inner">
-                                <img src="tattoo3.jpg" alt="Portfolio 3">
-                                <div class="item-info">
-                                    <span>Minimalistic Tattoo</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="premium-gallery-item">
-                            <div class="premium-gallery-inner">
-                                <img src="tattoo4.jpg" alt="Portfolio 4">
-                                <div class="item-info">
-                                    <span>Custom Design</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="premium-gallery-item">
-                            <div class="premium-gallery-inner">
-                                <img src="tattoo5.jpg" alt="Portfolio 5">
-                                <div class="item-info">
-                                    <span>Ornamental Line</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="premium-gallery-item">
-                            <div class="premium-gallery-inner">
-                                <img src="tattoo6.jpg" alt="Portfolio 6">
-                                <div class="item-info">
-                                    <span>Microrealism</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Instagram feed -->
-                <div class="instagram-section-wrapper animate-on-scroll" style="margin-top: 100px; padding-top: 60px; border-top: 1px solid var(--border-color);">
-                    <h2 class="gallery-subtitle" style="margin-bottom: 40px;">Instagram Feed</h2>
-                    <div class="behold-container">
-                        <behold-widget feed-id="KEGL1BrC2KqgYfweAYzV"></behold-widget>
-                    </div>
-                </div>
-
-                <div class="gallery-more animate-on-scroll text-center" style="margin-top: 60px;">
-                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener" class="btn-link" data-i18n="gallery.more">Více fotek na Instagramu →</a>
+            <!-- Instagram feed (volitelně) -->
+            <div class="instagram-section-wrapper animate-on-scroll" style="margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--border-color);">
+                <h2 class="gallery-subtitle text-center" style="margin-bottom: 40px;">Instagram Feed</h2>
+                <div class="behold-container">
+                    <behold-widget feed-id="KEGL1BrC2KqgYfweAYzV"></behold-widget>
                 </div>
             </div>
-        </section>
+
+            <div class="text-center" style="margin-top: 60px;">
+                <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener" class="btn-link" data-i18n="gallery.more">Více fotek na Instagramu →</a>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -138,7 +160,7 @@
                 <a href="index.html" class="logo">asha<span>tattoo</span></a>
                 <p data-i18n="footer.desc">Moderní tetovací studio v Pardubicích. Tetování na míru s důrazem na kvalitu, hygienu a individuální přístup.</p>
                 <div class="footer-socials">
-                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.instagram.com/asha___tattoo/" target="_blank">Instagram</a>
                     <a href="#" class="disabled-link">Facebook</a>
                     <a href="#" class="disabled-link">TikTok</a>
                 </div>
@@ -146,10 +168,9 @@
             <div class="footer-contacts">
                 <h4 data-i18n="footer.location">Kde nás najdete</h4>
                 <p class="footer-address">Nerudova 1407, 53002 Pardubice I - Zelené Předměstí, Česko</p>
-                <p class="footer-email">info@ashatattoo.cz</p>
                 <div class="footer-phone-wrapper">
                     <span class="phone-label" data-i18n="footer.phoneLabel">Telefon:</span>
-                    <a href="tel:+420777123456" class="footer-phone-link">+420 777 123 456</a>
+                    <a href="tel:+420721428115" class="footer-phone-link">+420 721 428 115</a>
                 </div>
             </div>
             <div class="footer-hours">
@@ -162,5 +183,58 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <img src="" alt="Lightbox image">
+    </div>
+
+    <script>
+        // Jednoduchý lightbox – napojený na galerii
+        (function() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = lightbox.querySelector('img');
+            const closeBtn = lightbox.querySelector('.lightbox-close');
+            const galleryItems = document.querySelectorAll('.premium-gallery-item');
+
+            function openLightbox(src) {
+                lightboxImg.src = src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+            });
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    if (img && img.src) openLightbox(img.src);
+                });
+            });
+            // Pro obrázky z Instagram widgetu (dynamické)
+            const observer = new MutationObserver(() => {
+                const beholdImages = document.querySelectorAll('.behold-container img');
+                beholdImages.forEach(img => {
+                    if (!img.hasAttribute('data-lightbox-enabled')) {
+                        img.setAttribute('data-lightbox-enabled', 'true');
+                        img.style.cursor = 'pointer';
+                        img.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            openLightbox(img.src);
+                        });
+                    }
+                });
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+        })();
+    </script>
 </body>
 </html>
