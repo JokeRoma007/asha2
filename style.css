@@ -25,16 +25,14 @@ body {
     font-family: var(--font-body);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    cursor: none;
+    cursor: default;   /* ✅ výchozí kurzor, JS ho přepne na none */
 }
 
 @media (max-width: 768px) {
-
     html,
     body {
         cursor: auto;
     }
-
     .custom-cursor,
     .custom-cursor-dot {
         display: none;
@@ -383,7 +381,7 @@ p,
 }
 
 .artist-statement {
-    font-size: 3.2rem;
+    font-size: 2.2rem;    /* ✅ zmenšeno */
     color: var(--accent-color);
     border-left: 1px solid var(--accent-color);
     padding-left: 30px;
@@ -778,63 +776,62 @@ p,
     color: var(--accent-color);
 }
 
+/* ✅ Responzivní úpravy (tablety a menší) */
 @media (max-width:1024px) {
     .hero-layout {
         grid-template-columns: 1fr;
         gap: 50px;
         text-align: center;
     }
-
     .hero-subtitle {
         margin: 0 auto 40px;
     }
-
     .hero-image-wrapper {
         height: 460px;
     }
-
     .hero-title {
         font-size: 3.8rem;
     }
-
     .grid-2 {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-
     .styles-grid {
         grid-template-columns: 1fr;
     }
-
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
-
     .action-card {
         grid-template-columns: 1fr;
     }
-
     .action-image {
         min-height: 280px;
     }
-
     .action-content {
         padding: 30px;
         text-align: center;
     }
 }
 
+/* ✅ Responzivní úpravy (mobil) */
 @media (max-width:768px) {
     .container {
         padding: 0 24px;
     }
-
     .section-title {
         font-size: 2.8rem;
     }
-
     .cta-title {
         font-size: 2.5rem;
+    }
+
+    /* Oprava padding headeru */
+    .header {
+        padding: 16px 20px;
+    }
+    .header.scrolled {
+        padding: 12px 20px;
     }
 
     .nav-menu {
@@ -851,16 +848,13 @@ p,
         z-index: 1050;
         background: var(--bg-color);
     }
-
     .nav-menu.active {
         right: 0;
     }
-
     .nav-menu a {
         margin: 18px 0;
         font-size: 1.2rem;
     }
-
     .mobile-menu-close {
         display: block;
         position: absolute;
@@ -871,7 +865,6 @@ p,
         font-size: 2rem;
         color: var(--text-color);
     }
-
     .menu-toggle {
         display: flex;
         flex-direction: column;
@@ -881,38 +874,72 @@ p,
         background: none;
         border: none;
     }
-
     .menu-toggle span {
         width: 100%;
         height: 1px;
         background: var(--text-color);
     }
-
     .hero-actions {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
-
     .hero-actions .btn-link {
         margin-left: 0;
     }
-
     .footer-grid {
         grid-template-columns: 1fr;
     }
-
     .image-placeholder {
         height: 420px;
     }
-
     .reviews-grid.photos-only {
         gap: 16px;
     }
-
     .lightbox-close {
         top: 15px;
         right: 20px;
         font-size: 2rem;
     }
+
+    /* ✅ Исправление бейджа — теперь он в потоке и не перекрывает текст */
+    .discount-badge {
+        position: relative;          /* убираем абсолютное позиционирование */
+        top: auto;
+        right: auto;
+        display: inline-flex;        /* чтобы элементы шли в строку */
+        flex-direction: row;         /* горизонтальное расположение */
+        align-items: center;
+        gap: 8px;                    /* расстояние между элементами */
+        padding: 6px 16px;           /* уменьшенный отступ */
+        margin: 0 auto 16px auto;    /* центрируем и даём отступ снизу */
+        border-radius: 40px;
+        font-size: 0.75rem;
+        width: auto;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .discount-badge-text,
+    .discount-badge-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.05em;
+    }
+
+    .discount-badge-percent {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0; /* убираем лишние отступы */
+    }
+
+    /* Добавляем верхний отступ карточке, чтобы бейдж не прилипал к краю */
+    .booking-card {
+        padding-top: 30px;
+    }
+}
+
+/* ✅ Galerie – sjednocení výšky obrázků (aspect ratio) */
+.premium-gallery-item img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }

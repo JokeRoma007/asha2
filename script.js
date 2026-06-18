@@ -7,6 +7,7 @@ const translations = {
         "nav.book": "Rezervace",
         "hero.tagline": "Pardubice — Profesionální tetovací studio",
         "hero.title1": "Tattoo Artistry",
+        "hero.title2": "v Pardubicích",           // ✅ doplněno
         "hero.subtitle": "Specializujeme se na kvalitní tetování šité na míru vašim představám. Každý motiv vytváříme s důrazem na preciznost, hygienu a dlouhou životnost.",
         "hero.explore": "Prohlédnout práci →",
         "general.bookBtn": "Rezervovat termín",
@@ -34,7 +35,7 @@ const translations = {
         "faq.q2": "Jak se mám připravit na tetování?",
         "faq.a2": "Den předem nepite alkohol a neužívejte léky na ředění krve. Pořádně se vyspěte, najezte se a vezměte si pohodlné oblečení, které nebrání přístupu k místu tetování.",
         "faq.q3": "Jak se starat o nové tetování?",
-        "faq.a3": "Nepoužíváme hojivé fólie (second skin).",
+        "faq.a3": "Používáme hojivé fólie (second skin), které necháte 3–4 dny. Poté opatrně odlepte, tetování jemně omyjte antibakteriálním mýdlem a osušte poklepáním. Následně 2× denně mažte doporučeným krémem po dobu 2 týdnů. Vyhněte se slunci, sauně, bazénu a nadměrnému pocení.",  // ✅ opraveno
         "faq.q4": "Kolik tetování stojí?",
         "faq.a4": "Celková cena závisí na velikosti, složitosti motivu a čase práce. Přesnou nabídku dostanete po konzultaci.",
         "faq.q5": "Bolí to? Lze použít anestetikum?",
@@ -71,7 +72,7 @@ const translations = {
         "footer.phoneLabel": "Telefon:",
         "reviews.title": "Co říkají klienti",
         "action.title": "1 + 1 = 1",
-        "action.text": "Přijďte si vyzkoušet tetování za zvýhodněnou cenu! ",
+        "action.text": "Přijďte si vyzkoušet tetování za zvýhodněnou cenu! Sledujte náš Instagram a získejte 15% slevu na vybrané motivy po celý červen.",  // ✅ doplněno
         "action.btn": "Zjistit více →"
     },
     ua: {
@@ -82,6 +83,7 @@ const translations = {
         "nav.book": "Запис",
         "hero.tagline": "Пардубіце — Професійна тату-студія",
         "hero.title1": "Тату-мистецтво",
+        "hero.title2": "у Пардубіце",              // ✅ doplněno
         "hero.subtitle": "Спеціалізуємося на якісних татуюваннях, створених саме для вас. Кожен малюнок виконуємо з увагою до гігієни, точності та довговічності.",
         "hero.explore": "Подивитись роботи →",
         "general.bookBtn": "Записатись",
@@ -109,7 +111,7 @@ const translations = {
         "faq.q2": "Як підготуватися до татуювання?",
         "faq.a2": "За день до сеансу не вживайте алкоголь та ліки, що розріджують кров. Добре виспіться, поїжте та візьміть зручний одяг, який не заважатиме доступу до місця татуювання.",
         "faq.q3": "Як доглядати за новим татуюванням?",
-        "faq.a3": "Ми не використовуємо загоювальні плівки (second skin).",
+        "faq.a3": "Ми використовуємо загоювальні плівки (second skin), які потрібно носити 3–4 дні. Потім обережно зняти, промити антибактеріальним милом, промокнути. Далі 2 рази на день мазати рекомендованим кремом протягом 2 тижнів. Уникати сонця, сауни, басейну та надмірного потовиділення.",  // ✅ opraveno
         "faq.q4": "Скільки коштує татуювання?",
         "faq.a4": "Загальна вартість залежить від розміру, складності та часу роботи. Точну ціну ви отримаєте після консультації.",
         "faq.q5": "Чи боляче? Чи можна використовувати анестезію?",
@@ -146,7 +148,7 @@ const translations = {
         "footer.phoneLabel": "Телефон:",
         "reviews.title": "Що кажуть клієнти",
         "action.title": "1 + 1 = 1",
-        "action.text": "Приходьте спробувати татуювання за зниженою ціною!",
+        "action.text": "Приходьте спробувати татуювання за зниженою ціною! Слідкуйте за нашим Instagram та отримайте 15% знижки на вибрані мотиви протягом усього червня.",  // ✅ doplněno
         "action.btn": "Дізнатися більше →"
     }
 };
@@ -160,7 +162,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initAccordion();
     initHeaderEffect();
     initMobileMenu();
-    
+    initLightbox();  // ✅ jednotný lightbox
+
     const savedLang = localStorage.getItem("preferred_lang") || "cs";
     updateLanguage(savedLang);
     const activeBtn = document.querySelector(`.lang-btn[data-lang="${savedLang}"]`);
@@ -175,10 +178,13 @@ function initSmoothScroll() {
     function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
     requestAnimationFrame(raf);
 }
+
 function initCursor() {
     const cursor = document.querySelector(".custom-cursor");
     const dot = document.querySelector(".custom-cursor-dot");
     if(!cursor||!dot) return;
+    // ✅ aktivace custom kurzoru – skryjeme výchozí
+    document.body.style.cursor = 'none';
     let mx=0,my=0,cx=0,cy=0;
     document.addEventListener("mousemove",e=>{ mx=e.clientX; my=e.clientY; dot.style.left=mx+"px"; dot.style.top=my+"px"; });
     function render(){ cx+=(mx-cx)*0.15; cy+=(my-cy)*0.15; cursor.style.left=cx+"px"; cursor.style.top=cy+"px"; requestAnimationFrame(render); }
@@ -189,6 +195,7 @@ function initCursor() {
     document.addEventListener("mouseover",e=>{ if(e.target.closest(interactive)){ cursor.style.width="60px"; cursor.style.height="60px"; cursor.style.backgroundColor="rgba(30,27,24,0.05)"; cursor.style.borderColor="var(--accent-color)"; } });
     document.addEventListener("mouseout",e=>{ if(e.target.closest(interactive)){ cursor.style.width="30px"; cursor.style.height="30px"; cursor.style.backgroundColor="transparent"; cursor.style.borderColor="var(--accent-color)"; } });
 }
+
 function initAnimations(){
     gsap.registerPlugin(ScrollTrigger);
     if(document.querySelector(".hero-tagline")){
@@ -203,6 +210,7 @@ function initAnimations(){
         gsap.from(el,{scrollTrigger:{trigger:el,start:"top 85%"},opacity:0,y:40,duration:1});
     });
 }
+
 function initLanguageSwitcher(){
     document.querySelectorAll(".lang-btn").forEach(btn=>{
         btn.addEventListener("click",e=>{
@@ -214,6 +222,7 @@ function initLanguageSwitcher(){
         });
     });
 }
+
 function updateLanguage(lang){
     document.querySelectorAll("[data-i18n]").forEach(el=>{
         const key=el.getAttribute("data-i18n");
@@ -221,6 +230,7 @@ function updateLanguage(lang){
     });
     document.documentElement.lang=lang==='ua'?'uk':lang;
 }
+
 function initAccordion(){
     document.querySelectorAll(".accordion-header").forEach(header=>{
         header.addEventListener("click",function(){
@@ -231,6 +241,7 @@ function initAccordion(){
         });
     });
 }
+
 function initHeaderEffect(){
     window.addEventListener("scroll",()=>{
         const header=document.querySelector(".header");
@@ -238,6 +249,7 @@ function initHeaderEffect(){
         else header.classList.remove("scrolled");
     });
 }
+
 function initMobileMenu(){
     const toggle=document.querySelector(".menu-toggle");
     const menu=document.querySelector(".nav-menu");
@@ -248,4 +260,50 @@ function initMobileMenu(){
     toggle.addEventListener("click",open);
     if(closeBtn) closeBtn.addEventListener("click",close);
     document.querySelectorAll(".nav-menu a").forEach(link=>link.addEventListener("click",close));
+}
+
+// ✅ Jednotná funkce pro lightbox – používá se na všech stránkách
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    function openLightbox(src) {
+        if (!src) return;
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        // vymazat src kvůli uvolnění paměti
+        lightboxImg.src = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
+
+    // Vyhledáme všechny klikatelné prvky s obrázky
+    const selectors = [
+        '.premium-gallery-item',   // galerie
+        '.review-photo-card',      // recenze
+        '.action-image'            // akce
+    ];
+    document.querySelectorAll(selectors.join(',')).forEach(el => {
+        el.addEventListener('click', function(e) {
+            const img = this.querySelector('img');
+            if (img && img.src) {
+                e.stopPropagation();
+                openLightbox(img.src);
+            }
+        });
+    });
 }
